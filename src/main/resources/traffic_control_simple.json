@@ -1,0 +1,107 @@
+{
+  "subjects": {
+    "d1022770-7da5-4b43-84e9-99e86aa3ada0": {
+      "id": "d1022770-7da5-4b43-84e9-99e86aa3ada0",
+      "name": "Traffic cross",
+      "assertions": [],
+      "x": -10,
+      "y": -80,
+      "initial": "bebec43a-1a68-4741-8e68-dd35bdbb4db4",
+      "states": {
+        "bebec43a-1a68-4741-8e68-dd35bdbb4db4": {
+          "id": "bebec43a-1a68-4741-8e68-dd35bdbb4db4",
+          "name": "Running",
+          "assertions": [],
+          "x": 10,
+          "y": 100,
+          "jumps": {
+            "81ee116c-1acb-46f7-90b8-ebfd75f6ffe3": {
+              "id": "81ee116c-1acb-46f7-90b8-ebfd75f6ffe3",
+              "name": "Change",
+              "assertions": [],
+              "x": 10,
+              "y": 220,
+              "fromStateName": "Running",
+              "toStateName": "Running",
+              "positive": true,
+              "peerJumps": [
+                {
+                  "subject": "V",
+                  "state": "Running",
+                  "jump": "Change"
+                },
+                {
+                  "subject": "H",
+                  "state": "Running",
+                  "jump": "Change"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "cbe0161e-6f7f-4c5a-a2d9-62fc498de24f": {
+      "id": "cbe0161e-6f7f-4c5a-a2d9-62fc498de24f",
+      "name": "V",
+      "assertions": [],
+      "x": 510,
+      "y": 750,
+      "initial": "1bfe3b38-f218-4666-8121-18da3b7bd9ce",
+      "states": {
+        "1bfe3b38-f218-4666-8121-18da3b7bd9ce": {
+          "id": "1bfe3b38-f218-4666-8121-18da3b7bd9ce",
+          "name": "Running",
+          "assertions": [],
+          "x": 520,
+          "y": 590,
+          "jumps": {
+            "e65759ae-9505-4185-b9d3-f2e76b98917e": {
+              "id": "e65759ae-9505-4185-b9d3-f2e76b98917e",
+              "name": "Change",
+              "assertions": [],
+              "x": 500,
+              "y": 460,
+              "fromStateName": "Running",
+              "toStateName": "Running",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        }
+      }
+    },
+    "51b637a6-53a3-4a76-abec-4dfd7976a1d5": {
+      "id": "51b637a6-53a3-4a76-abec-4dfd7976a1d5",
+      "name": "H",
+      "assertions": [],
+      "x": -250,
+      "y": 760,
+      "initial": "b3cdae65-4077-4566-ae87-012ac3941eed",
+      "states": {
+        "b3cdae65-4077-4566-ae87-012ac3941eed": {
+          "id": "b3cdae65-4077-4566-ae87-012ac3941eed",
+          "name": "Running",
+          "assertions": [],
+          "x": -240,
+          "y": 580,
+          "jumps": {
+            "e4fbe893-c1c5-41d3-8235-5371001cfadd": {
+              "id": "e4fbe893-c1c5-41d3-8235-5371001cfadd",
+              "name": "Change",
+              "assertions": [],
+              "x": -240,
+              "y": 460,
+              "fromStateName": "Running",
+              "toStateName": "Running",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "atomAssertions": [],
+  "globalAssertions": []
+}

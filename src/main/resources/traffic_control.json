@@ -1,0 +1,302 @@
+{
+  "subjects": {
+    "d1022770-7da5-4b43-84e9-99e86aa3ada0": {
+      "id": "d1022770-7da5-4b43-84e9-99e86aa3ada0",
+      "name": "Traffic cross",
+      "x": -10,
+      "y": -80,
+      "assertions": [],
+      "initial": "bebec43a-1a68-4741-8e68-dd35bdbb4db4",
+      "states": {
+        "bebec43a-1a68-4741-8e68-dd35bdbb4db4": {
+          "id": "bebec43a-1a68-4741-8e68-dd35bdbb4db4",
+          "name": "phase A",
+          "x": -350,
+          "y": 120,
+          "assertions": [],
+          "jumps": {
+            "81ee116c-1acb-46f7-90b8-ebfd75f6ffe3": {
+              "id": "81ee116c-1acb-46f7-90b8-ebfd75f6ffe3",
+              "name": "Change A",
+              "x": -230,
+              "y": 140,
+              "assertions": [],
+              "fromStateName": "phase A",
+              "toStateName": "Phase B",
+              "positive": true,
+              "peerJumps": [
+                {
+                  "subject": "H",
+                  "state": "Straight",
+                  "jump": "Change A"
+                },
+                {
+                  "subject": "V",
+                  "state": "Stop",
+                  "jump": "Change A"
+                }
+              ]
+            }
+          }
+        },
+        "5bf1ade2-9c77-4588-91a6-f228a58981fc": {
+          "id": "5bf1ade2-9c77-4588-91a6-f228a58981fc",
+          "name": "Phase B",
+          "x": -120,
+          "y": 130,
+          "assertions": [],
+          "jumps": {
+            "d3a18e9b-1fa4-4ebf-a831-a895937c9930": {
+              "id": "d3a18e9b-1fa4-4ebf-a831-a895937c9930",
+              "name": "Change B",
+              "x": 0,
+              "y": 140,
+              "assertions": [],
+              "fromStateName": "Phase B",
+              "toStateName": "phase C",
+              "positive": true,
+              "peerJumps": [
+                {
+                  "subject": "V",
+                  "state": "Straight",
+                  "jump": "Change B"
+                },
+                {
+                  "subject": "H",
+                  "state": "Stop",
+                  "jump": "Change B"
+                }
+              ]
+            }
+          }
+        },
+        "38a37246-c990-4530-bc71-5aee9fc25289": {
+          "id": "38a37246-c990-4530-bc71-5aee9fc25289",
+          "name": "phase C",
+          "x": 120,
+          "y": 130,
+          "assertions": [],
+          "jumps": {
+            "2ecedc74-358d-4faa-914c-2d33e781f394": {
+              "id": "2ecedc74-358d-4faa-914c-2d33e781f394",
+              "name": "Change C",
+              "x": 240,
+              "y": 150,
+              "assertions": [],
+              "fromStateName": "phase C",
+              "toStateName": "phase D",
+              "positive": true,
+              "peerJumps": [
+                {
+                  "subject": "V",
+                  "state": "Stop",
+                  "jump": "Change C"
+                },
+                {
+                  "subject": "H",
+                  "state": "Left",
+                  "jump": "Change C"
+                }
+              ]
+            }
+          }
+        },
+        "7aabdbc1-50de-47b4-862b-92e8a33a4fab": {
+          "id": "7aabdbc1-50de-47b4-862b-92e8a33a4fab",
+          "name": "phase D",
+          "x": 390,
+          "y": 130,
+          "assertions": [],
+          "jumps": {
+            "c4d7bad8-5aa4-4743-9fed-f9e8eff3de66": {
+              "id": "c4d7bad8-5aa4-4743-9fed-f9e8eff3de66",
+              "name": "Change D",
+              "x": 10,
+              "y": 350,
+              "assertions": [],
+              "fromStateName": "phase D",
+              "toStateName": "phase A",
+              "positive": true,
+              "peerJumps": [
+                {
+                  "subject": "H",
+                  "state": "Stop",
+                  "jump": "Change D"
+                },
+                {
+                  "subject": "V",
+                  "state": "Left",
+                  "jump": "Change D"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "cbe0161e-6f7f-4c5a-a2d9-62fc498de24f": {
+      "id": "cbe0161e-6f7f-4c5a-a2d9-62fc498de24f",
+      "name": "V",
+      "x": 510,
+      "y": 750,
+      "assertions": [],
+      "initial": "876b9aee-d0d5-45c0-8eea-e7cabeb8d808",
+      "states": {
+        "876b9aee-d0d5-45c0-8eea-e7cabeb8d808": {
+          "id": "876b9aee-d0d5-45c0-8eea-e7cabeb8d808",
+          "name": "Stop",
+          "x": 470,
+          "y": 540,
+          "assertions": [],
+          "jumps": {
+            "ae62beed-cc59-41c2-b362-1476a3282094": {
+              "id": "ae62beed-cc59-41c2-b362-1476a3282094",
+              "name": "Change A",
+              "x": 320,
+              "y": 440,
+              "assertions": [],
+              "fromStateName": "Stop",
+              "toStateName": "Straight",
+              "positive": false,
+              "peerJumps": []
+            },
+            "871a2166-30cf-4777-a643-3ef0cde72095": {
+              "id": "871a2166-30cf-4777-a643-3ef0cde72095",
+              "name": "Change C",
+              "x": 520,
+              "y": 440,
+              "assertions": [],
+              "fromStateName": "Stop",
+              "toStateName": "Left",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        },
+        "367ec91c-15ce-4e93-ad70-ad12fa5a2e07": {
+          "id": "367ec91c-15ce-4e93-ad70-ad12fa5a2e07",
+          "name": "Straight",
+          "x": 350,
+          "y": 540,
+          "assertions": [],
+          "jumps": {
+            "c8e01a95-342c-4996-8e75-88cc83f7807a": {
+              "id": "c8e01a95-342c-4996-8e75-88cc83f7807a",
+              "name": "Change B",
+              "x": 420,
+              "y": 440,
+              "assertions": [],
+              "fromStateName": "Straight",
+              "toStateName": "Stop",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        },
+        "1bfe3b38-f218-4666-8121-18da3b7bd9ce": {
+          "id": "1bfe3b38-f218-4666-8121-18da3b7bd9ce",
+          "name": "Left",
+          "x": 630,
+          "y": 540,
+          "assertions": [],
+          "jumps": {
+            "e65759ae-9505-4185-b9d3-f2e76b98917e": {
+              "id": "e65759ae-9505-4185-b9d3-f2e76b98917e",
+              "name": "Change D",
+              "x": 620,
+              "y": 430,
+              "assertions": [],
+              "fromStateName": "Left",
+              "toStateName": "Stop",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        }
+      }
+    },
+    "51b637a6-53a3-4a76-abec-4dfd7976a1d5": {
+      "id": "51b637a6-53a3-4a76-abec-4dfd7976a1d5",
+      "name": "H",
+      "x": -390,
+      "y": 880,
+      "assertions": [],
+      "initial": "b3cdae65-4077-4566-ae87-012ac3941eed",
+      "states": {
+        "4c0af51d-3289-4136-8cc1-2066046972e6": {
+          "id": "4c0af51d-3289-4136-8cc1-2066046972e6",
+          "name": "Stop",
+          "x": -370,
+          "y": 690,
+          "assertions": [],
+          "jumps": {
+            "8fd15cc0-0cc0-4709-be76-b5a0b7ae8b32": {
+              "id": "8fd15cc0-0cc0-4709-be76-b5a0b7ae8b32",
+              "name": "Change B",
+              "x": -250,
+              "y": 540,
+              "assertions": [],
+              "fromStateName": "Stop",
+              "toStateName": "Left",
+              "positive": false,
+              "peerJumps": []
+            },
+            "b3554323-d609-4f20-b2a0-b2a4bfed583b": {
+              "id": "b3554323-d609-4f20-b2a0-b2a4bfed583b",
+              "name": "Change D",
+              "x": -360,
+              "y": 540,
+              "assertions": [],
+              "fromStateName": "Stop",
+              "toStateName": "Straight",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        },
+        "75c93a86-3ba4-439c-ab9a-ec8b30f235bc": {
+          "id": "75c93a86-3ba4-439c-ab9a-ec8b30f235bc",
+          "name": "Left",
+          "x": -150,
+          "y": 680,
+          "assertions": [],
+          "jumps": {
+            "d72369fb-5200-4022-8400-a9b4deefbfec": {
+              "id": "d72369fb-5200-4022-8400-a9b4deefbfec",
+              "name": "Change C",
+              "x": -140,
+              "y": 540,
+              "assertions": [],
+              "fromStateName": "Left",
+              "toStateName": "Stop",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        },
+        "b3cdae65-4077-4566-ae87-012ac3941eed": {
+          "id": "b3cdae65-4077-4566-ae87-012ac3941eed",
+          "name": "Straight",
+          "x": -550,
+          "y": 680,
+          "assertions": [],
+          "jumps": {
+            "e4fbe893-c1c5-41d3-8235-5371001cfadd": {
+              "id": "e4fbe893-c1c5-41d3-8235-5371001cfadd",
+              "name": "Change A",
+              "x": -480,
+              "y": 540,
+              "assertions": [],
+              "fromStateName": "Straight",
+              "toStateName": "Stop",
+              "positive": false,
+              "peerJumps": []
+            }
+          }
+        }
+      }
+    }
+  },
+  "atomAssertions": [],
+  "globalAssertions": []
+}
